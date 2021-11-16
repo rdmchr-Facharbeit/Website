@@ -1,4 +1,4 @@
-import { Appwrite } from "appwrite";
+import { Appwrite } from 'appwrite';
 
 // Init your Web SDK
 const appwrite = new Appwrite();
@@ -8,15 +8,24 @@ appwrite
     .setProject('6193ae37b6810'); // Your project ID
 
 async function createSession() {
-    const res = appwrite.account.createAnonymousSession();
+    const res = await appwrite.account.createAnonymousSession().then((res) => {
+        console.log(res);
+    });
 }
 
-async function registerReset() {}
+async function isAuthenticated() {
+    return await appwrite.account.get().then(() => true).catch(() => false);;
+}
 
-async function registerSubmit() {}
+async function registerReset() {
+}
+
+async function registerSubmit() {
+}
 
 export {
     createSession,
     registerReset,
-    registerSubmit
-}
+    registerSubmit,
+    isAuthenticated
+};
