@@ -11,7 +11,7 @@
 </template>
 
 <script setup lang="ts">
-import { createSession, isAuthenticated } from '~/appwrite';
+import { createSession, isAuthenticated } from '../aw';
 import { useRouter } from 'vue-router';
 
 

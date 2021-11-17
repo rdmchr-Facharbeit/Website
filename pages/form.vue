@@ -24,7 +24,7 @@
 </template>
 
 <script setup lang="ts">
-import { createSession, isAuthenticated, registerReset, registerSubmit } from '../appwrite';
+import { createSession, isAuthenticated, registerReset, registerSubmit } from '../aw';
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 
