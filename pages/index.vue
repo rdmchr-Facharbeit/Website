@@ -11,11 +11,10 @@
 </template>
 
 <script setup lang="ts">
-import { createSession, isAuthenticated } from '~/appwrite';
-import { useRouter } from 'vue-router';
+import { createSession, isAuthenticated } from '../aw';
+import {useStore} from '../store';
 
-
-const router = useRouter();
+const store = useStore();
 
 async function setupAcc() {
   const currSess = await isAuthenticated();
@@ -24,7 +23,7 @@ async function setupAcc() {
     await createSession();
     console.log('Created a new session.');
   }
-  await router.push('/form');
+  await this.$nuxt.redirect('/form');
 }
 </script>
 
