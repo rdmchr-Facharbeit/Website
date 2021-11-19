@@ -12,9 +12,6 @@
 
 <script setup lang="ts">
 import { createSession, isAuthenticated } from '../aw';
-import {useStore} from '../store';
-
-const store = useStore();
 
 async function setupAcc() {
   const currSess = await isAuthenticated();

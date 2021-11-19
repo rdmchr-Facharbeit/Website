@@ -10,8 +10,6 @@
     "nuxt3": "latest"
   },
   "dependencies": {
-    "@pinia/nuxt": "^0.1.5",
-    "appwrite": "^5.0.0",
-    "pinia": "^2.0.3"
+    "appwrite": "^5.0.0"
   }
 }

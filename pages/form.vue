@@ -26,23 +26,19 @@
 
 <script setup lang="ts">
 import { createSession, isAuthenticated, registerReset, registerSubmit } from '../aw';
-import { ref } from '@vue/reactivity';
 
-
-const email = ref('');
-const password = ref('');
-const repeatPassword = ref('');
-
-const router = useRouter();
+let email = '';
+let password = '';
+let repeatPassword = '';
 
 async function submit() {
   await this.$nuxt.redirect('/success');
 }
 
 async function clear() {
-  email.value = '';
-  password.value = '';
-  repeatPassword.value = '';
+  email = '';
+  password = '';
+  repeatPassword = '';
   await registerReset();
 }
 </script>
