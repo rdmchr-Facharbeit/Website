@@ -26,8 +26,7 @@
 
 <script setup lang="ts">
 import { createSession, isAuthenticated, registerReset, registerSubmit } from '../aw';
-import { ref } from 'vue';
-import { useRouter } from 'vue-router';
+import { ref } from '@vue/reactivity';
 
 
 const email = ref('');
@@ -37,7 +36,7 @@ const repeatPassword = ref('');
 const router = useRouter();
 
 async function submit() {
-  await router.push('/success');
+  await this.$nuxt.redirect('/success');
 }
 
 async function clear() {
@@ -57,4 +56,3 @@ input {
   @apply border border-dark-900 rounded-lg px-3 py-1;
 }
 </style>
-

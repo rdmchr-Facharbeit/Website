@@ -22,7 +22,7 @@ async function isAuthenticated() {
 
 async function registerReset() {
     const data = await appwrite.database.listDocuments(DATA_COLLECTION)
-    return await 
+    return;
 }
 
 async function registerSubmit() {

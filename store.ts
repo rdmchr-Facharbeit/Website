@@ -6,7 +6,8 @@ import { appwrite } from './aw';
 export const useStore = defineStore('main', {
   actions: {
       async loadData() {
-        const user = await appwrite.account.get();
+        const {$id} = await appwrite.account.get();
+
       }
   },
   state: () => {
